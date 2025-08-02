@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body, html {
+    height: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #101822;
+    color: #e1e6eb;
+    overflow: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+
+  .sidebar {
+    width: 300px;
+    background-color: #141e2f;
+    border-left: 3px solid #fff;
+    color: white;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #3a4f6f;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .profile-name {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+    text-align: center;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 0.7rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #182637;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #e1e6eb;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .social-icons a:hover {
+    background-color: #1e2a47;
+    border-color: #54a0ff;
+    color: #54a0ff;
+  }
+
+  .social-icons i a {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  .nav-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .nav-menu a {
+    font-size: 0.95rem;
+    color: #a1acc9;
+    padding-left: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    border-left: 3px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .nav-menu a svg {
+    width: 18px;
+    height: 18px;
+    fill: #a1acc9;
+    flex-shrink: 0;
+  }
+
+  .nav-menu a.active,
+  .nav-menu a:hover {
+    color: #54a0ff;
+    border-left-color: #54a0ff;
+  }
+
+  .nav-menu a.active svg,
+  .nav-menu a:hover svg {
+    fill: #54a0ff;
+  }
+
+  .main-content {
+    flex-grow: 1;
+    background: url("IMG20240224145602.jpg") center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+    color: white;
+    position: relative;
+  }
+
+  .main-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(16, 24, 34, 0.7);
+    z-index: 0;
+  }
+
+  .intro-text {
+    position: relative;
+    max-width: 600px;
+    z-index: 1;
+  }
+
+  .intro-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+  }
+
+  .intro-text p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    position: relative;
+    padding-bottom: 8px;
+    max-width: 360px;
+  }
+
+  .intro-text p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100px;
+    background-color: #54a0ff;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column-reverse;
+    }
+    .sidebar {
+      width: 100%;
+      height: auto;
+      padding: 1.2rem 1rem;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      border-left: none;
+      border-top: 3px solid #fff;
+    }
+    .profile-pic {
+      width: 56px;
+      height: 56px;
+      border-width: 2px;
+      margin: 0;
+    }
+    .profile-name {
+      font-size: 1rem;
+      margin-left: 1rem;
+      white-space: nowrap;
+    }
+    .social-icons {
+      margin: 0 1rem;
+    }
+    .nav-menu {
+      flex-direction: row;
+      gap: 1.2rem;
+      display: none;
+    }
+    .main-content {
+      padding-left: 2rem;
+      justify-content: center;
+      text-align: center;
+    }
+    .intro-text h1 {
+      font-size: 2rem;
+    }
+    .intro-text p {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+    .intro-text p::after {
+      width: 70px;
+    }
+  }

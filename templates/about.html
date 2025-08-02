@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<title>Revanth Portfolio</title>
+<link rel="stylesheet" href="{% static 'about.css' %}">
+</head>
+<body>
+  <div class="container">
+    <main class="content" role="main" aria-labelledby="aboutHeading">
+        <h1 id="aboutHeading" class="section-title">About</h1>
+        <p class="about-text">
+            Computer Science Engineering student with strong academics and practical experience in software development
+            and machine learning. Skilled in Python, Java, and web technologies, with hands-on work using frameworks
+            like Django and TensorFlow. Enthusiastic about leveraging AI to innovate web technologies, and eager to apply
+            technical skills to build impactful solutions.
+        </p>
+        <div class="about-content">
+            <div class="about-image" aria-label="Profile portrait">
+                <img src="{% static 'profile_pic.jpeg' %}" alt="Profile" />
+            </div>
+            <div class="about-info">
+                <h2>Python & Web Developer &  JavaScript & Artificial Intilegence.</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label-icon" aria-hidden="true">></span><strong>linkedin</strong> <span>www.linkedin.com/in/revanth-kunche/</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label-icon" aria-hidden="true">></span><strong>Degree:</strong> <span>Bachelor of Computer Science</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label-icon" aria-hidden="true">></span><strong>Phone:</strong> <span>+91 9381690697</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label-icon" aria-hidden="true">></span><strong>City:</strong> <span>Vishakapatnam, Andhra Pradesh, India</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label-icon" aria-hidden="true">></span><strong>Email:</strong> <span>revanthkunche1206@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label-icon" aria-hidden="true">></span><strong>Opportunities:</strong> <span>Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar" role="complementary" aria-label="Sidebar navigation and profile info">
+      <div class="profile-pic" aria-label="Profile picture of Mohammad Burhan">
+        <img src="{% static 'profile_pic.jpeg' %}" alt="Profile" />
+      </div>
+      <div class="profile-name" aria-label="Profile name">Kunche Revanth</div>
+      <nav class="social-icons" aria-label="Social media links">
+          <a href="#" aria-label="Facebook" title="Facebook" tabindex="0">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Instagram" title="Instagram" tabindex="0">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn" tabindex="0">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" aria-label="GitHub" title="GitHub" tabindex="0">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" aria-label="WhatsApp" title="WhatsApp" tabindex="0">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+      </nav>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="{% url 'home' %}" tabindex="0">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
+        <a href="#" class="active" tabindex="0">
+          <i class="fas fa-user"></i>
+          About
+        </a>
+        <a href="{% url 'resume' %}" id="resume-link" tabindex="0">
+          <i class="fas fa-file-alt"></i>
+          Resume
+        </a>
+        <a href="{% url 'skills' %}" tabindex="0">
+          <i class="fas fa-lightbulb"></i>
+          Skills
+        </a>
+        <a href="{% url 'projects' %}" tabindex="0">
+          <i class="fas fa-code"></i>
+          Projects
+        </a>
+        <a href="{% url 'contact' %}" tabindex="0">
+          <i class="fas fa-envelope"></i>
+          Contact
+        </a>
+      </nav>
+    </aside>
+  </div>
+</body>
+</html>

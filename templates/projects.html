@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Kunche Revanth</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'projects.css' %}">
+</head>
+<body>
+  <div class="container">
+    <main class="main-content" role="main">
+      <div class="projects-wrapper">
+        <div class="projects-title">My Projects</div>
+
+        <div class="projects-container" aria-label="Projects list and preview">
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img src="{% static 'terminal-trolly-logo.png' %}" alt="terminal-trolly-logo" />
+            </div>
+            <div class="project-title">Terminal Trolly</div>
+            <div class="project-buttons">
+              <a href="https://github.com/revanthkunche1206/Ecommerce_Site" target="_blank"><button>Github</button></a>
+              <a href="https://ecommerce-site-6tns.onrender.com/" target="_blank"><button>Live</button></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img src="{% static 'Facial emotion recognition.png' %}" alt="TravelMate logo" />
+            </div>
+            <div class="project-title">Facial Recognition</div>
+            <div class="project-buttons">
+              <a href="https://github.com/revanthkunche1206/Facial-emotion-recognition" target="_blank"><button>Github</button></a>
+              <a href="#" target="_blank"><button>Live</button></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image-wrapper" style="background-color: #fef9f1;">
+              <img src="{% static 'facial-recognition-logo.png' %}" alt="EduLearn logo" />
+            </div>
+            <div class="project-title">upcomming</div>
+            <div class="project-buttons">
+              <a href="#" target="_blank"><button>Github</button></a>
+              <a href="#" target="_blank"><button>Live</button></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img src="{% static 'facial-recognition-logo.png' %}" alt="ChatHive logo" />
+            </div>
+            <div class="project-title">Upcomming</div>
+            <div class="project-buttons">
+              <a href="#" target="_blank"><button>Github</button></a>
+              <a href="#" target="_blank"><button>Live</button></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar" role="complementary">
+      <div class="profile-pic">
+        <img src="{% static 'profile_pic.jpeg' %}" alt="Profile" />
+      </div>
+      <div class="profile-name">Kunche Revanth</div>
+      <nav class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </nav>
+      <nav class="nav-menu">
+        <a href="{% url 'home' %}"><i class="fas fa-home"></i>Home</a>
+        <a href="{% url 'about' %}"><i class="fas fa-user"></i>About</a>
+        <a href="{% url 'resume' %}"><i class="fas fa-file-alt"></i>Resume</a>
+        <a href="{% url 'skills' %}"><i class="fas fa-lightbulb"></i>Skills</a>
+        <a href="#" class="active"><i class="fas fa-code"></i>Projects</a>
+        <a href="{% url 'contact' %}"><i class="fas fa-envelope"></i>Contact</a>
+      </nav>
+    </aside>
+  </div>
+</body>
+</html>

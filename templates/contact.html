@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Kunche Revanth</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'contact.css' %}">
+</head>
+<body>
+  <div class="container">
+    <main class="main-content" role="main">
+      <section class="contact-wrapper">
+        <h1 class="contact-title">Contact</h1>
+        <div class="contact-info-grid">
+          <div class="contact-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="email icon" />
+            <p>revanthkunche1206@gmail.com</p>
+          </div>
+          <div class="contact-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="location icon" />
+            <p>F.No-F4,Chandhini Enclave
+              Sri Thirumala Nagar
+              Vadlapudi, Gajuwaka
+              Vishakapatnam
+              Andhra Pradesh - 530046
+            </p>
+          </div>
+          <div class="contact-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="phone icon" />
+            <p>+91 9381690697</p>
+          </div>
+        </div>
+        <div class="contact-socials">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar" role="complementary">
+      <div class="profile-pic">
+        <img src="{% static 'profile_pic.jpeg' %}" alt="Profile" />
+      </div>
+      <div class="profile-name">Kunche Revanth</div>
+      <nav class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </nav>
+      <nav class="nav-menu">
+        <a href="{% url 'home' %}"><i class="fas fa-home"></i>Home</a>
+        <a href="{% url 'about' %}"><i class="fas fa-user"></i>About</a>
+        <a href="{% url 'resume' %}"><i class="fas fa-file-alt"></i>Resume</a>
+        <a href="{% url 'skills' %}"><i class="fas fa-lightbulb"></i>Skills</a>
+        <a href="{% url 'projects' %}"><i class="fas fa-code"></i>Projects</a>
+        <a href="#" class="active"><i class="fas fa-envelope"></i>Contact</a>
+      </nav>
+    </aside>
+  </div>
+</body>
+</html>

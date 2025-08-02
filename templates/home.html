@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<title>Revanth Portfolio</title>
+<link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+  <div class="container">
+    <main class="main-content" role="main" aria-label="Introductory content with photo background">
+      <section class="intro-text">
+        <h1>Kunche Revanth Satya Sai Raghuveer</h1>
+        <p>I'm AI/ML Engineer!!</p>
+      </section>
+    </main>
+
+    <aside class="sidebar" role="complementary" aria-label="Sidebar navigation and profile info">
+      <div class="profile-pic" aria-label="Profile picture of Mohammad Burhan">
+        <img src="{% static 'profile_pic.jpeg' %}" alt="Profile" />
+      </div>
+      <div class="profile-name" aria-label="Profile name">Kunche Revanth</div>
+      <nav class="social-icons" aria-label="Social media links">
+          <a href="#" aria-label="Facebook" title="Facebook" tabindex="0">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Instagram" title="Instagram" tabindex="0">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn" tabindex="0">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" aria-label="GitHub" title="GitHub" tabindex="0">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" aria-label="WhatsApp" title="WhatsApp" tabindex="0">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+      </nav>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="#" class="active" tabindex="0">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
+        <a href="{% url 'about' %}" tabindex="0">
+          <i class="fas fa-user"></i>
+          About
+        </a>
+        <a href="{% url 'resume' %}" id="resume-link" tabindex="0">
+          <i class="fas fa-file-alt"></i>
+          Resume
+        </a>
+        <a href="{% url 'skills' %}" tabindex="0">
+          <i class="fas fa-lightbulb"></i>
+          Skills
+        </a>
+        <a href="{% url 'projects' %}" tabindex="0">
+          <i class="fas fa-code"></i>
+          Projects
+        </a>
+        <a href="{% url 'contact' %}" tabindex="0">
+          <i class="fas fa-envelope"></i>
+          Contact
+        </a>
+      </nav>
+    </aside>
+  </div>
+</body>
+</html>

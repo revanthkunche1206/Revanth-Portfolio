@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revanth Portfolio - Skills</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'skills.css' %}">
+</head>
+<body>
+  <div class="container">
+    <main class="content">
+      <h1 class="skill-title">Skills</h1>
+      <div class="skills-container">
+        <div class="RadialProgress" data-skill="C" data-value="80">
+          <div class="label"></div>
+        </div>
+        <div class="RadialProgress" data-skill="HTML" data-value="85">
+          <div class="label"></div>
+        </div>
+        <div class="RadialProgress" data-skill="CSS" data-value="75">
+          <div class="label"></div>
+        </div>
+        <div class="RadialProgress" data-skill="JavaScript" data-value="70">
+          <div class="label"></div>
+        </div>
+        <div class="RadialProgress" data-skill="Python" data-value="90">
+          <div class="label"></div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="skills-container">
+        <div class="RadialProgress" data-skill="Machine learning" data-value="80">
+          <div class="label"></div>
+        </div>
+        <div class="RadialProgress" data-skill="Deep learning" data-value="85">
+          <div class="label"></div>
+        </div>
+        <div class="RadialProgress" data-skill="NLP" data-value="75">
+          <div class="label"></div>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <img src="{% static 'profile_pic.jpeg' %}" alt="Profile" />
+      </div>
+      <div class="profile-name">Kunche Revanth</div>
+      <nav class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </nav>
+      <nav class="nav-menu">
+        <a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a>
+        <a href="{% url 'about' %}"><i class="fas fa-user"></i> About</a>
+        <a href="{% url 'resume' %}"><i class="fas fa-file-alt"></i> Resume</a>
+        <a href="#" class="active"><i class="fas fa-lightbulb"></i> Skills</a>
+        <a href="{% url 'projects' %}"><i class="fas fa-code"></i> Projects</a>
+        <a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+    </aside>
+  </div>
+
+  <script src="{% static 'skills.js' %}"></script>
+</body>
+</html>
