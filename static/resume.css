@@ -40,8 +40,14 @@ ul {
 
 main.content {
   flex-grow: 1;
-  overflow-y: auto;
-  max-height: 100vh;
+  overflow-y: auto; 
+}
+
+main.content iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .profile-pic {
@@ -121,9 +127,6 @@ main.content {
   border-left-color: #54a0ff;
 }
 
-
-
-
 @media (max-width: 900px) {
   .container {
     flex-direction: column-reverse;
@@ -132,9 +135,9 @@ main.content {
   .sidebar {
     width: 100%;
     height: auto;
-    padding: 1.2rem 1rem;
-    flex-direction: row;
-    justify-content: space-around;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     border-left: none;
     border-top: 3px solid #fff;
@@ -143,27 +146,59 @@ main.content {
   .profile-pic {
     width: 56px;
     height: 56px;
-    border-width: 2px;
-    margin: 0;
+    margin-bottom: 0.5rem;
   }
 
   .profile-name {
     font-size: 1rem;
-    margin-left: 1rem;
-    white-space: nowrap;
+    margin: 0.5rem 0;
   }
 
   .social-icons {
-    margin: 0 1rem;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .nav-menu {
+    display: flex;
     flex-direction: row;
-    gap: 1.2rem;
-    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .nav-menu a {
+    padding: 0.4rem 0.6rem;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu a i {
+    margin-bottom: 2px;
+  }
+
+  .nav-menu a.active,
+  .nav-menu a:hover {
+    border-left: none;
+    border-bottom: 2px solid #54a0ff;
+    color: #54a0ff;
   }
 
   main.content {
     padding: 24px 20px 30px 20px;
+  }
+
+  main.content iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
   }
 }
