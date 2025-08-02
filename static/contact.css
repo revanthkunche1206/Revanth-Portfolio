@@ -121,7 +121,7 @@ a {
 
 .main-content {
   flex-grow: 1;
-  padding: 200px;
+  padding:10%;
   background-color: #101822;
   overflow-y: auto;
 }
