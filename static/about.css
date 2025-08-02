@@ -43,7 +43,6 @@ main.content {
   padding: 40px 48px;
   overflow-y: auto;
   max-height: 100vh;
-  margin-top: 200px;
 }
 
 .profile-pic {
@@ -221,59 +220,108 @@ main.content {
 @media (max-width: 900px) {
   .container {
     flex-direction: column-reverse;
+    height: auto;
   }
 
   .sidebar {
     width: 100%;
     height: auto;
-    padding: 1.2rem 1rem;
+    padding: 0.8rem 1rem;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     border-left: none;
     border-top: 3px solid #fff;
+    gap: 1rem;
   }
 
   .profile-pic {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     border-width: 2px;
     margin: 0;
   }
 
   .profile-name {
-    font-size: 1rem;
-    margin-left: 1rem;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
     white-space: nowrap;
   }
 
   .social-icons {
-    margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    margin: 0;
   }
 
   .nav-menu {
+    display: flex;
     flex-direction: row;
-    gap: 1.2rem;
-    display: none;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.6rem;
+    padding-top: 0.3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  main.content {
-    padding: 24px 20px 30px 20px;
+  .nav-menu a {
+    font-size: 0.8rem;
+    color: #a1acc9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.3rem 0.5rem;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-menu a.active,
+  .nav-menu a:hover {
+    color: #54a0ff;
+    border-bottom: 2px solid #54a0ff;
+  }
+
+  .main.content {
+    padding: 20px;
+    margin-top: 0;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    text-align: justify;
   }
 
   .about-content {
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
   }
 
   .about-image {
-    width: 90vw;
+    width: 90%;
     height: auto;
-    max-height: 360px;
+    max-height: 300px;
   }
 
   .about-info {
     min-width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 8px 0;
   }
 }
