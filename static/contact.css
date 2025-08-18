@@ -173,6 +173,14 @@ a {
   margin-bottom: 15px;
 }
 
+.contact-item i {
+  font-size: 80px;
+  color: white;
+  margin-bottom: 15px;
+  animation: pulse-loop 2.5s ease-in-out infinite;
+}
+
+
 .contact-item p {
   font-size: 1rem;
   line-height: 1.6;
